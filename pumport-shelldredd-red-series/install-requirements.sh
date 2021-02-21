@@ -53,7 +53,7 @@ echo "Installation requirements for optimal use of the script."
 echo ""
 echo "꧁   /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\  ꧂"
 echo ""
-sudo apt install -y nmap && sudo apt install -y whatweb
+sudo apt install -y nmap && sudo apt install -y whatweb && sudo apt-get install arp-scan
 echo ""
 echo "(<>..<>) ♥INSTALL SUCCESSFULLY COMPLETED♥"
 echo ""

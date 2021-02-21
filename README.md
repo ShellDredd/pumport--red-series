@@ -3,4 +3,6 @@ Script with port recognition functions and web information || reverse-shell libr
 
 # Capture
 #
-![Alt text](/images/1.png?raw=true "Title")
+![Alt text](/images/1.png?raw=true "HHuuuummmmmmmmm")
+![Alt text](/images/2.png?raw=true "AAAAAHHHHHHH")
+![Alt text](/images/3.png?raw=true "Si esperas una tercera, lo siento...")

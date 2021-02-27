@@ -88,7 +88,7 @@ while True:
         bulbasur('Please wait | Bytes time my friend')
         print ("")
         nmap = subprocess.getoutput('sudo nmap -n -sS -sV --min-rate 5000 -p- ' + str(ip) + ' | grep "open"')
-        vweb = subprocess.getoutput('sudo whatweb '+ str(ip))
+        vweb = subprocess.getoutput('sudo whatweb http:// '+ str(ip))
         charizar ('          Information Extraction')
         charizar ('=================================')
         charizar ('(っ◔◡◔)っ DETAILS WEB')
